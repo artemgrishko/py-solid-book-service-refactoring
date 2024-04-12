@@ -5,19 +5,19 @@ from app.serializer import BooksSerializerJson, BooksSerializerXML
 
 
 commands_dict = {
-        "display": {
-            "console": ConsoleDisplay.display,
-            "reverse": ReverseDisplay.display,
-        },
-        "print": {
-            "console": PrintConsole.print_book,
-            "reverse": PrintReverse.print_book,
-        },
-        "serialize": {
-            "xml": BooksSerializerXML.serialize,
-            "json": BooksSerializerJson.serialize,
-        },
-    }
+    "display": {
+        "console": ConsoleDisplay.display,
+        "reverse": ReverseDisplay.display,
+    },
+    "print": {
+        "console": PrintConsole.print_book,
+        "reverse": PrintReverse.print_book,
+    },
+    "serialize": {
+        "xml": BooksSerializerXML.serialize,
+        "json": BooksSerializerJson.serialize,
+    },
+}
 
 
 def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
