@@ -6,6 +6,7 @@ from app.book import Book
 
 
 class BookSerializer(ABC):
+
     def __init__(self, book: Book) -> None:
         self.book = book
 

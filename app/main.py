@@ -23,7 +23,12 @@ commands_dict = {
 def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
     result = None
     for cmd, method_type in commands:
+        if cmd not in commands_dict:
+            raise ValueError(f"Unknown command: {cmd}")
+        if method_type not in commands_dict[cmd]:
+            raise ValueError(f"Unknown method_type: {method_type}")
         result = commands_dict[cmd][method_type](book)
+
     return result
 
 
